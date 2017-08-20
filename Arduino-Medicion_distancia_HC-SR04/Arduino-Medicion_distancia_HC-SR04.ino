@@ -46,9 +46,13 @@ void loop() {
   */
   
   distancia = duracion / 29;  //Redondeamos, sólo se puede trabajar con enteros
+  if (distancia > 5){
+    Serial.print("La distancia es de: ");
+    Serial.println(distancia);  
+  }
+  else
+    Serial.println("LANZAR AVISO");
   
-  Serial.print("La distancia es de: ");
-  Serial.println(distancia);
   delay(200);
   
 }
